@@ -23,5 +23,19 @@ with open('rosalind_revc.txt' ,'r') as f:
     print(rc_dna)                       
 
 
+# # Alternative method 1: Using lower case letters as replacement nucleotides and 'upper' method to create the complementary DNA seq.
+# #                       Then using slicing method to reverse the sequence of nucleotides.
+# with open('rosalind_revc.txt' ,'r') as f: 
+#     f = f.read()
+#     f = f.replace('A', 't').replace('T', 'a').replace('C', 'g').replace('G', 'c').upper()[::-1]
+#     print (f)
+
+
+
+# Alternative method 2: Using 'translate' and 'maketrans' method of str class to create complementary sequnce
+#                       Then using slicing method to reverse the sequence of nucleotides.
+# with open('rosalind_revc.txt' ,'r') as f: 
+#     f = f.read()
+#     print(f[::-1].translate(str.maketrans('ACGT', 'TGCA')))
 
 
